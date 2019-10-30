@@ -40,13 +40,17 @@ const ExternalApi = () => {
 
     return (
         <>
-            <Profile />
+            {isAuthenticated && <Profile />}
             <h1>External API</h1>
             {!isAuthenticated && (
                 <button onClick={() => loginWithRedirect({})}>Login</button>
             )}
             {isAuthenticated && (
-                <button onClick={() => logoutWithRedirect()}>Logout</button>
+                <div>
+                    <button onClick={() => logoutWithRedirect()}>Logout</button>
+                    <a href="https://coffee-central.eu.auth0.com/samlp/vygtRN1RZ0cPkSw1BnXwSfXFvypwrwjK?RelayState=http://localhost:3001" target="_blank"><button>Highland</button></a>
+                    <a href="https://coffee-central.eu.auth0.com/samlp/RcXmOSC6gPLGGyOReYsMF38nGU10DzSi?RelayState=http://localhost:3002" target="_blank"><button>Starbucks</button></a>
+                </div>
             )}
             <button onClick={callApi}>Ping API</button>
             {showResult && <code>{JSON.stringify(apiMessage, null, 2)}</code>}
