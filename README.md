@@ -17,11 +17,18 @@ user@coffee.com
 pass: Rosen2019!
 
 # Architecture
-### Model
-![System Model](model.png)
+### Diagrams
+![model.png](model.png)
+
+#### OIDC Flow
+![oidc.png](oidc.png)
+
+#### SAML Flow
+![saml.png](saml.png)
+<!--*Source: https://www.elastic.co/blog/how-to-enable-saml-authentication-in-kibana-and-elasticsearch*-->
 
 ### Scenario
-We have 4 applications, each one has its own backend server (BE), frontend client app (FE), and identity provider (IDP).
+We have 4 applications, each one has its own service (including backend and frontend), and an identity provider (IDP).
 
 The BE of one app can understand tokens issued by its IDP only. For example, Starbucks's BE can only understand tokens issued by Starbucks's IDP.
 
@@ -39,4 +46,7 @@ Setup communication between IDP and SP:
 
 Result: When user login into a SP using IDP's user credentials, the IDP will generate a token whose issuer is from the SP.
 
-
+# References
+- https://auth0.com/docs/protocols/saml/samlsso-auth0-to-auth0#8-create-the-html-page-for-a-test-application
+- https://hackernoon.com/federated-identities-a-developers-primer-655a160d66cb
+- https://www.youtube.com/watch?v=6H3iOIWaSzM
