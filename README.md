@@ -20,8 +20,8 @@ pass: Rosen2019!
 ### Diagrams
 ![model.png](model.png)
 
-#### OIDC Flow
-![oidc.png](oidc.png)
+<!--#### OIDC Flow-->
+<!--![oidc.png](oidc.png)-->
 
 #### SAML Flow
 ![saml.png](saml.png)
