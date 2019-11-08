@@ -36,16 +36,14 @@ The BE of one app can understand tokens issued by its IDP only. For example, Sta
 Question: how can we login into Starbucks, Highland and Highland B2C using Coffee's user credentials?
 
 ### Implementation
-The BE and FE of all 4 apps is left untouched. For easier explanation, from now on we will call Coffee Identity Provider (IDP) and the 3 other apps Service Provider (SP). More details as follow:
-- Coffee is Identity Provider using Auth0
-- Starbucks and Highland are Service Provider using Auth0
-- Highland B2C is Service Provider using Azure AD B2C
+The BE and FE of all 4 apps are left untouched. The IdPs are setup as following:
+* For SAML
+    * Coffee acts as SAML Identity Provider using Auth0
+    * Starbucks and Highland act as SAML Service Provider using Auth0
 
-Setup communication between IDP and SP:
-- Auth0 as IDP and Auth0 as SP: we setup SAML connection
-- Auth0 as IDP and Azure AD B2C as SP: we setup Open ID Connect connection
+* For OIDC: in Highland B2C (Azure AD B2C), we config a OIDC connection using Coffee (Auth0)'s client id, client secret, and some other information.
 
-Result: When user login into a SP using IDP's user credentials, the IDP will generate a token whose issuer is from the SP.
+Result: When user login into a service using Coffee's user credentials, the Coffee will generate a token whose issuer is from the service's IdP itself.
 
 # References
 - https://auth0.com/docs/protocols/saml/samlsso-auth0-to-auth0#8-create-the-html-page-for-a-test-application
