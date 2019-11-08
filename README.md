@@ -25,6 +25,7 @@ pass: Rosen2019!
 
 #### SAML Flow
 ![saml.png](saml.png)
+![saml2.png](saml2.png)
 <!--*Source: https://www.elastic.co/blog/how-to-enable-saml-authentication-in-kibana-and-elasticsearch*-->
 
 ### Scenario
