@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5745045e64c817ee764a721528eedb10",
+    "revision": "4a39b666a234d3adac5018a1db66bcf3",
     "url": "/Coffee/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Coffee/static/js/2.64b934df.chunk.js"
   },
   {
-    "revision": "24b326dc74d6b6298922",
-    "url": "/Coffee/static/js/main.db9dc691.chunk.js"
+    "revision": "d8e6c286eb95a93202ee",
+    "url": "/Coffee/static/js/main.b95bc378.chunk.js"
   },
   {
     "revision": "565623525245192e3853",
